@@ -24,7 +24,7 @@ public class Point implements Comparable<Point> {
     }
     // string representation
     public String toString(){
-        return "("+this.x +","+this.y +")"; // FIXME: 11/19/16 figure out how to use format string in java :)
+        return "(" + x + ", " + y + ")";
     }
     // compare two points by y-coordinates, breaking ties by x-coordinates
     public int compareTo(Point that){
