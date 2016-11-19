@@ -76,6 +76,6 @@ public class BruteCollinearPoints {
         for (int i = 0; i < segments.size(); i++){
             retSegments[i] = segmentsIterator.next();
         }
-        return retSegments; 
+        return retSegments;
     }
 }
