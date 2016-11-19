@@ -19,16 +19,14 @@ public class FastCollinearPoints {
             Arrays.sort(qpoints, points[i].slopeOrder());
             counter = 0;
             slope = null;
-            for (int j = 0; j < points.length; j++){
-                if (j != i){
+            for (int j = 1; j < points.length; j++){
                     current = qpoints[j];
-                    if (slope == points[i].slopeTo(qpoints[j]))
+                    if (slope == qpoints[0].slopeTo(qpoints[j]))
                         counter++;
-                    slope = points[i].slopeTo(qpoints[j]);
-                }
+                    slope = qpoints[0].slopeTo(qpoints[j]);
             }
             if (counter >= 2) { // first wasnt counted meep
-                LineSegment segment = new LineSegment(points[i], current);
+                LineSegment segment = new LineSegment(qpoints[0], current);
                 segqueue.enqueue(segment);
             }
         }
