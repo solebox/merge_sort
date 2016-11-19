@@ -13,7 +13,7 @@ import java.util.Set;
 
 public class BruteCollinearPoints {
     // finds all line segments containing 4 points
-    Queue<LineSegment> segments = new Queue<LineSegment>();
+    private Queue<LineSegment> segments = new Queue<LineSegment>();
 
     public BruteCollinearPoints(Point[] points){
         Point point1, point2, point3, point4;
